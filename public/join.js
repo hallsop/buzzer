@@ -6,6 +6,7 @@ const buzzer = document.querySelector('.js-buzzer')
 const joinedInfo = document.querySelector('.js-joined-info')
 const editInfo = document.querySelector('.js-edit')
 
+
 let user = {}
 
 const getUserInfo = () => {
@@ -28,10 +29,11 @@ form.addEventListener('submit', (e) => {
   }
   socket.emit('join', user)
   saveUserInfo()
-  joinedInfo.innerText = `${user.name} on Team ${user.team}`
+  joinedInfo.innerText = `${user.name}`
   form.classList.add('hidden')
   joined.classList.remove('hidden')
   body.classList.add('buzzer-mode')
+
 })
 
 buzzer.addEventListener('click', (e) => {
@@ -43,5 +45,6 @@ editInfo.addEventListener('click', () => {
   form.classList.remove('hidden')
   body.classList.remove('buzzer-mode')
 })
+
 
 getUserInfo()

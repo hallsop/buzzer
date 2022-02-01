@@ -26,6 +26,10 @@ button {
 
 p {
   margin: 2em 0;
+  padding: 10px;
+  background: rgb(224,224,224);
+  color: rgb(0,0,0);
+
 }
 
 ol {
@@ -45,9 +49,9 @@ header {
 }
 
 .logo {
-  width: 100%;
+  /*width: 100%;*/
   max-width: 310px;
-  max-height: 120px;
+  max-height: 400px;
   padding: 1em 0;
 }
 
@@ -62,12 +66,15 @@ header {
 }
 
 .buzzer-mode {
-  background-color: rgb(16, 21, 78);
-  color: rgb(243, 175, 185);
+  /*background-color: rgb(16, 21, 78);*/
+  color: rgb(234, 53, 47);
+  background-image: url("background.png");
+  background-size: 100% auto;
 }
 
 input[type="text"],
 input[type="number"],
+select,
 button {
   display: block;
   padding: 0.8em 1.4em;
@@ -80,12 +87,14 @@ button {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+select {
   border: 1px solid #B8B8B8;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+select:focus,
 input[type="text"]:active,
 input[type="number"]:active {
   border-color: #2c4bff;
@@ -103,7 +112,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(22, 29, 153);
+  background-color: rgb(234, 53, 47);
 }
 
 button:active {
@@ -122,15 +131,15 @@ button:focus {
 .buzzer {
   height: 10em;
   font-size: 2em;
-  background-color: rgb(243, 175, 185);
-  color: rgb(18, 30, 102);
+  background-color: rgb(224, 224, 224);
+  color: rgb(0, 0, 0);
 }
 .buzzer:focus {
   box-shadow: 0 0 0 3px #ABB7FF;
 }
 .buzzer:hover,
 .buzzer:active {
-  background-color: #e97284;
+  background-color: rgb(234, 53, 47);
 }
 
 .secondary {

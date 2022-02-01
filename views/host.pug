@@ -6,14 +6,15 @@ html
     link(rel="stylesheet" href='/style.css')
   body
     header
-      img.logo(src='/buzzer-logo.svg')
+      img.logo(src='/higfmmfy-logo.png')
 
     div.container
-      h2.js-active=`${users.length} joined`
+      //h2.js-active=`${users.length} joined`
+      h2.js-enabled_text=`${enabled}`
       ol.js-buzzes
         each buzz in buzzes
-          li=`${buzz.name} on Team ${buzz.team}`
+          li=`${buzz.name} - ${buzz.team}`
       button.js-clear='Clear buzzes'
-
+      button.js-disable='Enable/Disable Buzzes'
     script(src='/socket.io/socket.io.js')
     script(src='/host.js')
